@@ -1,1 +1,41 @@
 
+<div class="container-fluid">
+    <h2 class="text-center">Have a quote you would like to share with the rest of us?</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+            <h4>Input your quote here:</h4>
+            <label for="name"></label>
+            <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel"
+                required></textarea>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>The actual quote is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>Who is the author of this masterpiece?</h4>
+            <label for="author"></label>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
+                #author="ngModel">
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <h4>What is your name?</h4>
+            <label for="submitter"></label>
+            <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter"
+                name="submitter" #submitter="ngModel">
+            <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+                <p>Your name is required</p>
+            </div>
+
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-success">Submit Quote</button>
+    </form>
+</div>
