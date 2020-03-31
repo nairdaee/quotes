@@ -1,2 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
+.boxed {
+    border: 5px solid black ;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 10px 0px 20px 0px;
+    font-weight: bolder;
+    font-family: 'Playfair Display SC', serif;
+    background-color: black;
+    color: white;
+}
+.container {
+    color:black;
+    font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
+}
+.padding {
+    padding: 10px;
+}
+.padding-quote {
+    padding-top: 20px;
+}
+.fa-thumbs-up {
+    color: green !important;
+    font-size: 35px;
+}
+.fa-thumbs-down {
+    color: red !important;
+    font-size: 35px;
+}
+.margin {
+    margin-left: 20px;
+}
