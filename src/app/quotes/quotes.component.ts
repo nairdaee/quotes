@@ -21,12 +21,12 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
 
-  addNewQuote(quote) {
+  addNewQuote(quotes) {
     let quoteLength = this.quotes.length;
-    quote.submitDate = new Date()
-    quote.numberOfLikes = 0;
-    quote.numberOfDislikes = 0;
-    this.quotes.push(quote)
+    quotes.submitDate = new Date()
+    quotes.numberOfLikes = 0;
+    quotes.numberOfDislikes = 0;
+    this.quotes.push(quotes)
   }
 
   deleteQuote(isComplete, index){
@@ -40,7 +40,7 @@ export class QuotesComponent implements OnInit {
   }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
