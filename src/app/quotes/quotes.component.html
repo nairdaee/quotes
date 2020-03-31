@@ -5,6 +5,7 @@
         <div *ngFor='let quote of quotes; let i = index'>
             <h3 class="padding-quote">{{quote.name}}</h3>
             <button (click)='toggleDetails(i)'>Show More</button>
+            <app-quote-detail *ngIf = 'quote.showAuthor' [quotes]= 'quotes' (isComplete)= 'deleteQuote($event,i)'></app-quote-detail>
     </div>
-</div>
-</div>
+   </div>
+</div>   

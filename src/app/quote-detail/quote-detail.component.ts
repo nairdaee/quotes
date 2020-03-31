@@ -11,7 +11,7 @@ export class QuoteDetailComponent implements OnInit {
   numberOfLikes: number;
   numberOfDislikes: number;
 
-  @Input() quote: Quotes;
+  @Input() quotes: Quotes;
   @Output() isComplete = new EventEmitter<boolean>();
 
   likeVote(): boolean{
