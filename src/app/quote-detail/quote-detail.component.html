@@ -1,1 +1,22 @@
-<p>quote-detail works!</p>
+<div class="padding">
+    <p>Author: {{ quote.author }}</p>
+    <p>Submitted: {{quote.submitDate|dateAgo}} by {{quote.submitter}}.</p>
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-default" href (click)="likeVote()"><span class="fa fa-thumbs-up"
+            aria-hidden="true"></span></a>
+</div>
+<div class="btn-group" role="group">
+    {{ numberOfLikes }}
+</div>
+
+<div class="btn-group" role="group">
+    <a class="btn btn-default" href (click)="dislikeVote()"><span class="fa fa-thumbs-down"
+            aria-hidden="true"></span></a>
+</div>
+<div class="btn-group" role="group">
+    {{ numberOfDislikes }}
+</div>
+
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger margin">Delete Quote</button>
