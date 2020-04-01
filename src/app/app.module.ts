@@ -9,19 +9,19 @@ import { DateAgoPipe } from './date-ago.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    DateAgoPipe,
     QuoteFormComponent,
-    QuoteDetailComponent
+    QuoteDetailComponent,
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
