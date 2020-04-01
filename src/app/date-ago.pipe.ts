@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'dateAgo'
+  name: 'dateAgo',
+  pure:true
 })
 export class DateAgoPipe implements PipeTransform {
 
