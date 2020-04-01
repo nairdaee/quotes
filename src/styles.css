@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
 body {
    background-color: rgb(57, 57, 128);
 }
 .boxed {
-    border: 5px solid black ;
+    border: none ;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 20px;
@@ -36,4 +37,8 @@ body {
 }
 .margin {
     margin-left: 20px;
+}
+.container1 {
+    background-color: rgb(90, 170, 197);
+    text-align: center;
 }
