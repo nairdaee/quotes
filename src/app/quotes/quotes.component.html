@@ -4,6 +4,10 @@
     <div class="col-md-12 boxed">
         <div *ngFor='let quote of quotes; let i = index'>
             <h3 class="padding-quote">{{quote.name}}</h3>
+            <div class="padding">
+                <p>Author: {{ quote.author }}</p>
+                <p>Submitted: {{ quote.submitDate|dateAgo }} by {{quote.submitter}}.</p>
+            </div>
             <button (click)='toggleDetails(i)'>Show More</button>
             <app-quote-detail *ngIf = 'quote.showAuthor' [quotes]= 'quotes' (isComplete)= 'deleteQuote($event,i)'></app-quote-detail>
     </div>
