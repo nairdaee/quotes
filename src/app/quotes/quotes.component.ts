@@ -11,12 +11,12 @@ export class QuotesComponent implements OnInit {
 
 
   quotes: Quotes[] = [
-    new Quotes(1, "It is when we fall that we can only rise", "Roman Stevenson", new Date(2018,7,16), 'Audrey'),
-    new Quotes(2, "He who is calm has already won the fight", "Mohamed Ali", new Date(2020,2,31), 'Jane Kinyua'),
-    new Quotes(2, "Music is a shorthand of emotion", "Leo Tosloy", new Date(2019,2,31), 'Edith Kobi'),
-    new Quotes(2, "Patience is a virtue that rewards the endurers", "Adika Asumpta", new Date(2018,2,31), 'Steve Kuria'),
-    new Quotes(2, "Time waits for no man", "Ken Pitt", new Date(2019,2,20), 'Emmanuel Oshwal'),
-    new Quotes(2, "A successful individual will never succumb to laziness", "Trevor Boat", new Date(2020,1,11), 'Audrey Amolo'),
+    new Quotes(1, "It is when we fall that we can only rise",0,0, "Roman Stevenson", new Date(2018,7,16), 'Audrey'),
+    new Quotes(2, "He who is calm has already won the fight",0,0, "Mohamed Ali", new Date(2020,2,31), 'Jane Kinyua'),
+    new Quotes(2, "Music is a shorthand of emotion",0,0,"Leo Tosloy", new Date(2019,2,31), 'Edith Kobi'),
+    new Quotes(2, "Patience is a virtue that rewards the endurers",0,0, "Adika Asumpta", new Date(2018,2,31), 'Steve Kuria'),
+    new Quotes(2, "Time waits for no man",0,0, "Ken Pitt", new Date(2019,2,20), 'Emmanuel Oshwal'),
+    new Quotes(2, "A successful individual will never succumb to laziness",0,0, "Trevor Boat", new Date(2020,1,11), 'Audrey Amolo'),
      
 
   ];
@@ -41,6 +41,22 @@ export class QuotesComponent implements OnInit {
         this.quotes.splice(index,1)
       }
     }
+  }
+
+  highestArr:any[]
+  highestVotes() {
+    this.highestArr = this.quotes.map(element => {
+      return element.numberOfLikes;
+    });
+    let numHigh = Math.max(...this.highestArr);
+    this.quotes.forEach(element => {
+      if(element.numberOfLikes === numHigh) {
+        element.highestVote = true;
+      } else {
+        element.highestVote = false;
+      }
+    });
+    
   }
   constructor() { }
 

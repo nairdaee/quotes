@@ -8,7 +8,7 @@
     <br>
     <div class="col-md-12 boxed">
         <div *ngFor='let quote of quotes; let i = index'>
-            <h3 class="padding-quote">{{quote.name}}</h3>
+            <h3 class="padding-quote" [style.backgroundColor]="quote.highestVote"  appHighlight>{{quote.name}}</h3>
             <div class="padding">
                 <p>Author: {{ quote.author }}</p>
                 <p>Submitted: {{ quote.submitDate|dateAgo }} by {{quote.submitter}}.</p>
