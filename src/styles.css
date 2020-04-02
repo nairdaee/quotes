@@ -1,44 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue|Do+Hyeon|Open+Sans+Condensed:300|Roboto+Mono&display=swap');
 body {
    background-color: rgb(57, 57, 128);
 }
+.title{
+    text-align: center;
+    color:white;
+    font-family:'Do Hyeon', sans-serif;
+    text-shadow: 2px 2px rgb(23, 23, 59);
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {color:red; left:0px; top:0px;}
+    25%  {color:yellow; left:30px; top:0px;}
+    50%  {color:blue; left:90px; top:0px;}
+    75%  {color:green; left:0px; top:0px;}
+    100% {color:red; left:0px; top:0px;}
+  }
+.break{
+    color:black;
+}
 .boxed {
-    border: none ;
+    border-top: 3px dashed rgb(90, 170, 197) ;
+    border-bottom: 3px dashed rgb(90, 170, 197) ;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 20px;
     margin: 10px 0px 20px 0px;
     font-weight: bolder;
-    font-family: 'Playfair Display SC', serif;
-    background-color: rgb(23, 23, 59);
+    font-family: 'Comic Neue', cursive;
+    background-color: rgb(25, 25, 48);
     color: white;
+    border-radius: 30px;
 }
+.padding-quote{
+    font-family: 'Open Sans Condensed', sans-serif;
+    word-spacing: 4px;
+
+}
+
 .container {
     color:rgb(23, 23, 59);
     font-weight: bold;
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Comic Neue', cursive;
 }
 .padding {
     padding: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 .padding-quote {
     padding-top: 20px;
 }
 .fa-thumbs-up {
-    color: green !important;
+    background-color: transparent;
+    color: rgb(57, 133, 57) !important;
     font-size: 35px;
 }
 .fa-thumbs-down {
-    color: red !important;
+    background-color: transparent;
+    color: rgb(161, 50, 50) !important;
     font-size: 35px;
 }
 .margin {
     margin-left: 20px;
 }
 .container1 {
-    background-color: rgb(90, 170, 197);
+    background-color: rgb(190, 225, 236);
     text-align: center;
+    border-radius: 50px;
+    border-top: 6px dashed rgb(6, 47, 61) ;
+
+}
+
+.userform{
+    text-align: center;
+    animation-name: userform;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes userform {
+    0%   {color:rgb(190, 225, 236); left:0px; top:0px;}
+    25%  {color:rgb(57, 57, 128); left:30px; top:0px;}
+    50%  {color:rgb(190, 225, 236); left:90px; top:0px;}
+    75%  {color:rgb(57, 57, 128); left:0px; top:0px;}
+    100% {color:rgb(190, 225, 236); left:0px; top:0px;}
+  }
+
+.form-group{
+     background-color: rgb(7, 87, 114);
+     border-radius: 60px;
+
+
+}
+
+#name{
+    background-color: rgb(90, 170, 197);
+    border: 1px solid rgb(23, 23, 59);
+
+}
+#author{
+    background-color: rgb(90, 170, 197);
+    border: 1px solid rgb(23, 23, 59);
+    padding-right: 50%;
+
+}
+#submitter{
+    background-color: rgb(90, 170, 197);
+    border: 1px solid rgb(23, 23, 59);
+    color:white;
+
+
+}
+.btn{
+    border-radius: 30px;
+    background-color:rgb(23, 23, 59);
+    color: white;
+}
+.btnmore{
+    border-radius: 30px;
+    background-color: rgb(90, 170, 197);
 }
