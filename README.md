@@ -41,6 +41,7 @@ The highlight directive does not execute. Contact etadriano2@gmail.com incase of
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Live site
+https://nairdaee.github.io/quotes/
 
 ### License
 Copyright (c) {2020} Adrian Etenyi, Moringa School
